@@ -29,6 +29,7 @@ public:
     void wczytajUzytkownikowZPliku();
     Uzytkownik logowanieUzytkownika();
     vector <Uzytkownik> pobierzUzytkownikow();
+    void zmianaHaslaZalogowanegoUzytkownika();
 };
 
 #endif

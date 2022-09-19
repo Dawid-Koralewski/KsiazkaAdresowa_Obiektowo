@@ -5,11 +5,12 @@ using namespace std;
 
 int main()
 {
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
 
-    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-
-    ksiazkaAdresowa.pokazMenuGlowne();
+    while (true)
+    {
+        ksiazkaAdresowa.pokazMenuGlowne();
+    }
 
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 

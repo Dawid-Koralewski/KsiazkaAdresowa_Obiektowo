@@ -1,0 +1,84 @@
+# depslib dependency file v1.0
+1663234309 source:c:\users\z004kh8y\onedrive - siemens energy\documents\szkolenie\ksiazkaadresowa_obiektowo\uzytkownik.cpp
+	"Uzytkownik.h"
+
+1663234309 c:\users\z004kh8y\onedrive - siemens energy\documents\szkolenie\ksiazkaadresowa_obiektowo\uzytkownik.h
+	<iostream>
+
+1663592166 source:c:\users\z004kh8y\onedrive - siemens energy\documents\szkolenie\ksiazkaadresowa_obiektowo\adresat.cpp
+	"Adresat.h"
+
+1663592074 c:\users\z004kh8y\onedrive - siemens energy\documents\szkolenie\ksiazkaadresowa_obiektowo\adresat.h
+	<iostream>
+
+1663594129 source:c:\users\z004kh8y\onedrive - siemens energy\documents\szkolenie\ksiazkaadresowa_obiektowo\main.cpp
+	<iostream>
+	"KsiazkaAdresowa.h"
+
+1663595168 c:\users\z004kh8y\onedrive - siemens energy\documents\szkolenie\ksiazkaadresowa_obiektowo\ksiazkaadresowa.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<fstream>
+	<sstream>
+	"UzytkownikMenedzer.h"
+	"AdresatMenedzer.h"
+
+1663596457 c:\users\z004kh8y\onedrive - siemens energy\documents\szkolenie\ksiazkaadresowa_obiektowo\uzytkownikmenedzer.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<fstream>
+	<sstream>
+	"Uzytkownik.h"
+	"PlikZUzytkownikami.h"
+
+1663596743 c:\users\z004kh8y\onedrive - siemens energy\documents\szkolenie\ksiazkaadresowa_obiektowo\plikzuzytkownikami.h
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	"Uzytkownik.h"
+	"MetodyPomocnicze.h"
+
+1663590935 c:\users\z004kh8y\onedrive - siemens energy\documents\szkolenie\ksiazkaadresowa_obiektowo\metodypomocnicze.h
+	<iostream>
+	<sstream>
+	<windows.h>
+	<fstream>
+
+1663590935 source:c:\users\z004kh8y\onedrive - siemens energy\documents\szkolenie\ksiazkaadresowa_obiektowo\metodypomocnicze.cpp
+	"MetodyPomocnicze.h"
+
+1663598392 source:c:\users\z004kh8y\onedrive - siemens energy\documents\szkolenie\ksiazkaadresowa_obiektowo\plikzadresatami.cpp
+	"PlikZAdresatami.h"
+
+1663593958 c:\users\z004kh8y\onedrive - siemens energy\documents\szkolenie\ksiazkaadresowa_obiektowo\plikzadresatami.h
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	"Adresat.h"
+	"MetodyPomocnicze.h"
+
+1663597569 source:c:\users\z004kh8y\onedrive - siemens energy\documents\szkolenie\ksiazkaadresowa_obiektowo\plikzuzytkownikami.cpp
+	"PlikZUzytkownikami.h"
+
+1663597180 source:c:\users\z004kh8y\onedrive - siemens energy\documents\szkolenie\ksiazkaadresowa_obiektowo\uzytkownikmenedzer.cpp
+	"UzytkownikMenedzer.h"
+
+1663593914 source:c:\users\z004kh8y\onedrive - siemens energy\documents\szkolenie\ksiazkaadresowa_obiektowo\adresatmenedzer.cpp
+	"AdresatMenedzer.h"
+
+1663593914 c:\users\z004kh8y\onedrive - siemens energy\documents\szkolenie\ksiazkaadresowa_obiektowo\adresatmenedzer.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<fstream>
+	<sstream>
+	"Adresat.h"
+	"PlikZAdresatami.h"
+
+1663596469 source:c:\users\z004kh8y\onedrive - siemens energy\documents\szkolenie\ksiazkaadresowa_obiektowo\ksiazkaadresowa.cpp
+	"KsiazkaAdresowa.h"
+

@@ -6,22 +6,21 @@
 #include <fstream>
 #include <cstdlib>
 
-#include "Uzytkownik.h"
+#include "Adresat.h"
 #include "MetodyPomocnicze.h"
 
 using namespace std;
 
 class PlikZAdresatami
 {
-//    const string nazwaPlikuZUzytkownikami;
-//    bool czyPlikJestPusty(fstream &plikTekstowy);
-//    string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
-//    Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
-//
-//public:
-//    PlikZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI) : nazwaPlikuZUzytkownikami(NAZWAPLIKUZUZYTKOWNIKAMI) {};
-//    void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
-//    vector <Uzytkownik> wczytajUzytkownikowZPliku();
+    const string nazwaPlikuZAdresatami;
+    Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
+
+public:
+    PlikZAdresatami(string NAZWAPLIKUZADRESATAMI) : nazwaPlikuZAdresatami(NAZWAPLIKUZADRESATAMI) {};
+    int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    int wczytajAdresatowZalogowanegoUzytkownikaZPliku(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika);
 };
 
 #endif
