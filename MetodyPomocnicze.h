@@ -5,6 +5,7 @@
 #include <sstream>
 #include <windows.h>
 #include <fstream>
+#include <algorithm>
 
 using namespace std;
 
@@ -17,6 +18,7 @@ public:
     static char wczytajZnak();
     static string pobierzLiczbe(string tekst, int pozycjaZnaku);
     static int konwersjaStringNaInt(string liczba);
+    static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
 };
 
 #endif

@@ -88,11 +88,12 @@ Uzytkownik UzytkownikMenedzer::logowanieUzytkownika()
                 if (itr -> pobierzHaslo() == haslo)
                 {
                     cout << endl << "Zalogowales sie." << endl << endl;
-                    system("pause");
+                    //system("pause");
 
                     uzytkownik.ustawID(itr -> pobierzId());
                     uzytkownik.ustawLogin(itr -> pobierzLogin());
                     uzytkownik.ustawHaslo(itr -> pobierzHaslo());
+                    zalogowanyUzytkownik = uzytkownik;
                     return uzytkownik;
                 }
             }
@@ -127,5 +128,5 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
             system("pause");
         }
     }
-    //plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+    plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }

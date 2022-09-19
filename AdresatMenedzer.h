@@ -21,6 +21,8 @@ class AdresatMenedzer
 
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {};
+    Adresat podajDaneNowegoAdresata();
+    void dodajAdresata();
     void ustawIdZalogowanegouzytkownika(int noweID);
     void ustawIdOstatniegoAdresata(int noweID);
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
