@@ -88,11 +88,12 @@ Uzytkownik UzytkownikMenedzer::logowanieUzytkownika()
                 if (itr -> pobierzHaslo() == haslo)
                 {
                     cout << endl << "Zalogowales sie." << endl << endl;
-                    system("pause");
+                    //system("pause");
 
                     uzytkownik.ustawID(itr -> pobierzId());
                     uzytkownik.ustawLogin(itr -> pobierzLogin());
                     uzytkownik.ustawHaslo(itr -> pobierzHaslo());
+                    zalogowanyUzytkownik = uzytkownik;
                     return uzytkownik;
                 }
             }
@@ -110,4 +111,22 @@ Uzytkownik UzytkownikMenedzer::logowanieUzytkownika()
 vector <Uzytkownik> UzytkownikMenedzer::pobierzUzytkownikow()
 {
     return uzytkownicy;
+}
+
+void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
+{
+    string noweHaslo = "";
+    cout << "Podaj nowe haslo: ";
+    noweHaslo = MetodyPomocnicze::wczytajLinie();
+
+    for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
+    {
+        if (itr -> pobierzId() == zalogowanyUzytkownik.pobierzId())
+        {
+            itr -> ustawHaslo(noweHaslo);
+            cout << "Haslo zostalo zmienione." << endl << endl;
+            system("pause");
+        }
+    }
+    plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }

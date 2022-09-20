@@ -14,21 +14,23 @@ using namespace std;
 
 class AdresatMenedzer
 {
-//    vector <Uzytkownik> uzytkownicy;
-//    PlikZUzytkownikami plikZUzytkownikami;
-//
-//    Uzytkownik podajDaneNowegoUzytkownika();
-//    Uzytkownik zalogowanyUzytkownik;
-//    int pobierzIdNowegoUzytkownika();
-//    bool czyIstniejeLogin(string login);
-//
-//public:
-//    UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {};
-//    void rejestracjaUzytkownika();
-//    void wypiszWszystkichUzytkownikow();
-//    void wczytajUzytkownikowZPliku();
-//    Uzytkownik logowanieUzytkownika();
-//    vector <Uzytkownik> pobierzUzytkownikow();
+    vector <Adresat> adresaci;
+    PlikZAdresatami plikZAdresatami;
+    int idZalogowanegoUzytkownika = 0;
+    int idOstatniegoAdresata = 0;
+
+public:
+    AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {};
+    Adresat podajDaneNowegoAdresata();
+    void dodajAdresata();
+    void ustawIdZalogowanegouzytkownika(int noweID);
+    void ustawIdOstatniegoAdresata(int noweID);
+    void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
+    int pobierzIdZalogowanegoUzytkownika();
+    int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
+    vector <Adresat> pobierzAdresatow();
+    void wyswietlWszystkichAdresatow();
 };
 
 #endif
