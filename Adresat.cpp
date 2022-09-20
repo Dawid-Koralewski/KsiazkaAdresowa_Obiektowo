@@ -70,3 +70,13 @@ string Adresat::pobierzAdres()
 {
     return adres;
 }
+
+void Adresat::wyswietlDaneAdresata()
+{
+    cout << endl << "Id:                 " << pobierzIdAdresata() << endl;
+    cout << "Imie:               " << pobierzImie() << endl;
+    cout << "Nazwisko:           " << pobierzNazwisko() << endl;
+    cout << "Numer telefonu:     " << pobierzNumerTelefonu() << endl;
+    cout << "Email:              " << pobierzEmail() << endl;
+    cout << "Adres:              " << pobierzAdres() << endl;
+}

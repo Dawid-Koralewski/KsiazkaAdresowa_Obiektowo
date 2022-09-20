@@ -30,6 +30,7 @@ public:
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
     vector <Adresat> pobierzAdresatow();
+    void wyswietlWszystkichAdresatow();
 };
 
 #endif

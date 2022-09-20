@@ -63,6 +63,7 @@ int PlikZAdresatami::pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(strin
 
 int PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika)
 {
+    adresaci.clear();
     Adresat adresat;
     int idAdresata = 0;
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
@@ -84,8 +85,10 @@ int PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(vector <Adres
         daneOstaniegoAdresataWPliku = daneJednegoAdresataOddzielonePionowymiKreskami;
     }
     else
+    {
         cout << "Nie udalo sie otworzyc pliku i wczytac danych." << endl;
         system("pause");
+    }
 
     plikTekstowy.close();
 

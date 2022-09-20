@@ -12,7 +12,5 @@ int main()
         ksiazkaAdresowa.pokazMenuGlowne();
     }
 
-    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-
     return 0;
 }
