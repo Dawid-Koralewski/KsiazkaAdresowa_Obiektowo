@@ -16,14 +16,17 @@ class AdresatMenedzer
 {
     vector <Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
-    int idZalogowanegoUzytkownika = 0;
+    const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
     int idOstatniegoAdresata = 0;
 
 public:
-    AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {};
+    AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
+        : plikZAdresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
+    {
+        plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, ID_ZALOGOWANEGO_UZYTKOWNIKA);
+    };
     Adresat podajDaneNowegoAdresata();
     void dodajAdresata();
-    void ustawIdZalogowanegouzytkownika(int noweID);
     void ustawIdOstatniegoAdresata(int noweID);
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
     int pobierzIdZalogowanegoUzytkownika();
