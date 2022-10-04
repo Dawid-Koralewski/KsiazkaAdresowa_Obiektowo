@@ -5,7 +5,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
     Adresat adresat;
 
     adresat.ustawID(++idOstatniegoAdresata);
-    adresat.ustawIDUzytkownika(idZalogowanegoUzytkownika);
+    adresat.ustawIDUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
     adresat.ustawImie(MetodyPomocnicze::wczytajLinie());
@@ -25,11 +25,6 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
     adresat.ustawAdres(MetodyPomocnicze::wczytajLinie());
 
     return adresat;
-}
-
-void AdresatMenedzer::ustawIdZalogowanegouzytkownika(int noweID)
-{
-    idZalogowanegoUzytkownika = noweID;
 }
 
 void AdresatMenedzer::dodajAdresata()
@@ -59,7 +54,7 @@ void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogo
 
 int AdresatMenedzer::pobierzIdZalogowanegoUzytkownika()
 {
-    return idZalogowanegoUzytkownika;
+    return ID_ZALOGOWANEGO_UZYTKOWNIKA;
 }
 
 int AdresatMenedzer::pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami)

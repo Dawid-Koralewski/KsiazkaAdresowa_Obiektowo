@@ -37,23 +37,23 @@ void KsiazkaAdresowa::pokazMenuGlowne()
         else
         {
 
-            if (adresatMenedzer.pobierzAdresatow().empty() == true)
+            //if (adresatMenedzer.pobierzAdresatow().empty() == true)
                 // Pobieramy idOstatniegoAdresata, po to aby zoptymalizowac program.
                 // Dzieki temu, kiedy uztykwonik bedzie dodawal nowego adresata
                 // to nie bedziemy musieli jeszcze raz ustalac idOstatniegoAdresata
-                adresatMenedzer.ustawIdZalogowanegouzytkownika(zalogowanyUzytkownik.pobierzId());
-                adresatMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresatMenedzer.pobierzIdZalogowanegoUzytkownika());
+
+                adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, zalogowanyUzytkownik.pobierzId());
 
             wybor = wybierzOpcjeZMenuUzytkownika();
 
             switch (wybor)
             {
             case '1':
-                adresatMenedzer.dodajAdresata();
+                adresatMenedzer -> dodajAdresata();
                 break;
 
             case '4':
-                adresatMenedzer.wyswietlWszystkichAdresatow();
+                adresatMenedzer -> wyswietlWszystkichAdresatow();
                 break;
 
             case '7':
@@ -62,7 +62,8 @@ void KsiazkaAdresowa::pokazMenuGlowne()
 
             case '8':
                 zalogowanyUzytkownik.ustawID(0);
-                adresatMenedzer.pobierzAdresatow().clear();
+                delete adresatMenedzer;
+                adresatMenedzer = NULL;
                 break;
             }
         }
