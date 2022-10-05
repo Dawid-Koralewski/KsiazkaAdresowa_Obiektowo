@@ -29,7 +29,7 @@ int UzytkownikMenedzer::pobierzIdNowegoUzytkownika()
 
 bool UzytkownikMenedzer::czyIstniejeLogin(string login)
 {
-    for (int i = 0; i < uzytkownicy.size(); i++)
+    for (int i = 0; i < (int) uzytkownicy.size(); i++)
     {
         if (uzytkownicy[i].pobierzLogin() == login)
         {
@@ -53,7 +53,7 @@ void UzytkownikMenedzer::rejestracjaUzytkownika()
 
 void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
 {
-    for (int i = 0; i < uzytkownicy.size(); i++)
+    for (int i = 0; i < (int) uzytkownicy.size(); i++)
     {
         cout << endl << uzytkownicy[i].pobierzId();
         cout << endl << uzytkownicy[i].pobierzLogin();

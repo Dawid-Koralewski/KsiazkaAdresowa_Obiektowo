@@ -98,7 +98,10 @@ int PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(vector <Adres
         return idAdresata;
     }
     else
+    {
+        cout << endl << endl << "ZERO" << endl << endl;
         return 0;
+    }
 }
 
 void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)

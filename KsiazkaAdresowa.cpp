@@ -36,13 +36,7 @@ void KsiazkaAdresowa::pokazMenuGlowne()
         }
         else
         {
-
-            //if (adresatMenedzer.pobierzAdresatow().empty() == true)
-                // Pobieramy idOstatniegoAdresata, po to aby zoptymalizowac program.
-                // Dzieki temu, kiedy uztykwonik bedzie dodawal nowego adresata
-                // to nie bedziemy musieli jeszcze raz ustalac idOstatniegoAdresata
-
-                adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, zalogowanyUzytkownik.pobierzId());
+            adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, zalogowanyUzytkownik.pobierzId());
 
             wybor = wybierzOpcjeZMenuUzytkownika();
 
