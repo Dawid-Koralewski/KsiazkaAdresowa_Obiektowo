@@ -14,6 +14,7 @@ using namespace std;
 class PlikZAdresatami
 {
     const string nazwaPlikuZAdresatami;
+    const string nazwaTymczasowegoPlikuZAdresatami;
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
 
 public:
@@ -24,6 +25,11 @@ public:
     void dopiszAdresataDoPliku(Adresat adresat);
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     bool czyPlikJestPusty(fstream &plikTekstowy);
+    int usunWybranegoAdresataZPliku(int idUsuwanegoAdresata);
+    int pobierzZPlikuIdOstatniegoAdresata();
+    void usunPlik(string nazwaPlikuZRozszerzeniem);
+    void zmienNazwePliku(string staraNazwa, string nowaNazwa);
+    void edytujDaneWybranegoAdresataWPliku(int idEdytowanegoAdresata, string liniaZDanymiAdresata);
 };
 
 #endif

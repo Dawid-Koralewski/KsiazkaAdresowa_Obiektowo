@@ -36,7 +36,7 @@ void KsiazkaAdresowa::pokazMenuGlowne()
         }
         else
         {
-            adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, zalogowanyUzytkownik.pobierzId());
+            adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, "AdresaciTEMP.txt", zalogowanyUzytkownik.pobierzId());
 
             wybor = wybierzOpcjeZMenuUzytkownika();
 
@@ -48,6 +48,15 @@ void KsiazkaAdresowa::pokazMenuGlowne()
 
             case '4':
                 adresatMenedzer -> wyswietlWszystkichAdresatow();
+                break;
+
+            case '5':
+                adresatMenedzer->ustawidUsunietegoAdresata(adresatMenedzer->usunAdresata());
+                adresatMenedzer->ustawIdOstatniegoAdresata(adresatMenedzer->podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(adresatMenedzer->pobierzIdUsunietegoAdresata(), adresatMenedzer->pobierzIdOstatniegoAdresata()));
+                break;
+
+            case '6':
+                adresatMenedzer->edytujAdresata();
                 break;
 
             case '7':
@@ -89,7 +98,8 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika()
     cout << "---------------------------" << endl;
     cout << "1. Dodaj adresata" << endl;
     cout << "4. Wyswietl adresatow" << endl;
-    cout << "---------------------------" << endl;
+    cout << "5. Usun adresata" << endl;
+    cout << "6. Edytuj adresata" << endl;
     cout << "7. Zmien haslo" << endl;
     cout << "8. Wyloguj sie" << endl;
     cout << "---------------------------" << endl;
